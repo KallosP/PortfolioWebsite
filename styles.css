@@ -1,8 +1,19 @@
+@font-face {
+    font-family: 'Poppins Regular';
+    src: url('fonts/Poppins-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins Bold';
+    src: url('fonts/Poppins-Bold.ttf') format('truetype');
+}
+
+
 body{
     background: rgb(5, 5, 5);
     /* Removes edge borders */
     margin: 0;
     padding: 0;
+    font-family: 'Poppins Regular';
 }
 
 /*  
@@ -35,7 +46,7 @@ header{
 }
 
 #navbar li a{
-    color: white;
+    color: rgb(28, 255, 134);
     text-align: center;
     text-decoration: none;
 }
@@ -45,13 +56,91 @@ header{
     opacity: 0.7;
 
 } 
+/* ------------------------ */
 
+
+
+/* Intro ------------ */
+
+#intro {
+    height: 100vh;
+    background-image: url("images/mountain.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    text-align: center;
+}
+
+#intro ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#intro li {
+    display: inline-block;
+    margin: 0px 20px 0px 20px;
+}
+
+#intro li a{
+    color: rgb(28, 255, 134);
+    text-align: center;
+    text-decoration: none;
+}
+
+#intro li a:hover{
+    /*add animation to hover*/
+    opacity: 0.7;
+
+}
+
+#intro h2 {
+    font-family: 'Poppins Bold';
+    font-size: 70px;
+    margin-bottom: 0px;
+}
+
+#intro p {
+    margin-top: 0px;
+    font-size: 17px;
+}
+
+.info {
+    margin-top: 20vh;
+}
 
 /* ------------------------ */
 
+
+/* Projects ------------ */
+#projects {
+    text-align: center;
+}
+/* ------------------------ */
+
+/* Skills ------------ */
+#skills {
+    text-align: center;
+}
+/* ------------------------ */
+
+/* Education ------------ */
+#education{
+    text-align: center;
+}
+/* ------------------------ */
+
+/* Contact ------------ */
+#contact {
+    text-align: center;
+}
+/* ------------------------ */
+
+
+
 section{
-    background: white;
     padding: 20px;
+    color: rgb(28, 255, 134);
 }
 
 footer{
