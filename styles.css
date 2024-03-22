@@ -1,0 +1,61 @@
+body{
+    background: rgb(5, 5, 5);
+    /* Removes edge borders */
+    margin: 0;
+    padding: 0;
+}
+
+/*  
+    - Top Right Bottom Left (like a clock) for pixel attributes
+    margin = the space around the body
+    padding = the space inside the body
+*/
+
+/* Nav bar ------------ */
+header{
+    background: black;
+    color: rgb(28, 255, 134);
+    padding: 20px;
+
+    /* Creates sticky effect for nav bar */
+    position: sticky;
+    top: 0;
+}
+
+
+#navbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar li {
+    display: inline-block;
+    margin: 0px 20px 0px 0px;
+}
+
+#navbar li a{
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+#navbar li a:hover{
+    /*add animation to hover*/
+    opacity: 0.7;
+
+} 
+
+
+/* ------------------------ */
+
+section{
+    background: white;
+    padding: 20px;
+}
+
+footer{
+    background: black;
+    color: white;
+    padding: 10px;
+}

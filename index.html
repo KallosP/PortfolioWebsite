@@ -3,21 +3,75 @@
     <!-- head is for metadata (data about data). metadata is data abou the HTML document.
         meta data is not displayed -->
     <head>
+        <meta charset="UTF-8">
         <!-- used to represent the metatdata of the website. can be used to define various
         attributes about your website and also make it responsive  -->
-        <meta/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- simply the name on the tab of your website -->
         <title>Peter Kallos' Website</title>
         <!-- link tag used to link css file. also used to provide the small icon in the
             browser tab for the logo (good website for generating that logo/icon:
             https://favicon.io/favicon-generator/ -->
-        <link/>
+        <link rel="stylesheet" href="styles.css">
     </head>
 
-    <!-- TODO: - snap scrolling -->
+    <!-- TODO:  - snap scrolling
+                - glow that's centered on cursor
+                - logo in tab
+                - cool banner/interactive for header
+             -->
 
     <body>
-        <p>Hello World</p>
+        <!-- div = divider (content block), fills out whole screen left to right (CSS can change that)-->
+        <!-- semantic tags: 
+            - are all basically div tags but have specific use cases
+            - introduced to avoid having to always use divs
+            - ex: header, nav, section, footer (all these are divs but allows us to describe our webpage
+                in a way that it's a lot easier to read) -->
+
+        <!-- Nav bar -->
+        <header>
+            <nav id="navbar" class="sticky">
+                <ul>
+                    <li><a href="#intro">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Intro -->
+        <section id="intro">
+            <div class="content">
+                <h2>My Name is Peter Kallos</h2>
+                <p>an undergraduate computer science student with a passion for software and all things technology.</p>
+            </div>
+        </section>
+        <!-- Projects -->
+        <section id="projects">
+            <h2>My Work</h2>
+            <div>
+                <h3><a href="https://github.com/AVC-CS-Committee/InteractiveCampusMap">Interactive Campus Map</a></h3>
+            </div>
+            <div>
+                <h3><a href="https://github.com/KallosP/Virtual-World">Virtual World</a></a></h3>
+            </div>
+            <div>
+                <h3><a href="https://replit.com/@KahMei/TTRPG-Group#src/util/Key.java">College RPG</a></a></h3>
+            </div>
+            <div>
+                <h3><a href="https://github.com/KallosP/DiceGame">Dice 10,000</a></a></h3>
+            </div>
+        </section>
+        <!-- Skills -->
+        <section id="skills">Skills</section>
+        <!-- Education -->
+        <section id="education">Education (Coursework??)</section>
+        <!-- Contact -->
+        <section id="contact">Contact</section>
+        <footer>Footer</footer>
+
     </body>
 
 </html>
