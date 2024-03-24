@@ -95,20 +95,20 @@ header{
 
 /* Pulsing effect ----- (Credit: https://codepen.io/asp/pen/MWbxOz) ------*/
 @-webkit-keyframes pulseBox {
-  0% {-webkit-box-shadow: 0px 0px 10px 0px rgba(0, 255, 0, 0.6);}
-  100% {-webkit-box-shadow: 0px 0px 18px 0px rgba(0, 255, 0, 0.9);}
+  0% {-webkit-box-shadow: 0px 0px 10px 0px rgba(28, 255, 134, 0.6);}
+  100% {-webkit-box-shadow: 0px 0px 18px 0px rgba(28, 255, 134, 0.9);}
 }
 @-moz-keyframes pulseBox {
-  0% {-moz-box-shadow: 0px 0px 10px 0px rgba(0, 255, 0, 0.6);}
-  100% {-moz-box-shadow: 0px 0px 18px 0px rgba(0, 255, 0, 0.9);}
+  0% {-moz-box-shadow: 0px 0px 10px 0px rgba(28, 255, 134, 0.6);}
+  100% {-moz-box-shadow: 0px 0px 18px 0px rgba(28, 255, 134, 0.9);}
 }
 @-o-keyframes pulseBox {
-  0% {-o-box-shadow: 0px 0px 10px 0px rgba(0, 255, 0, 0.6);}
-  100% {-o-box-shadow: 0px 0px 18px 0px rgba(0, 255, 0, 0.9);}
+  0% {-o-box-shadow: 0px 0px 10px 0px rgba(28, 255, 134, 0.6);}
+  100% {-o-box-shadow: 0px 0px 18px 0px rgba(28, 255, 134, 0.9);}
 }
 @keyframes pulseBox {
-  0% {box-shadow: 0px 0px 10px 0px rgba(0, 255, 0, 0.6);}
-  100% {box-shadow: 0px 0px 18px 0px rgba(0, 255, 0, 0.9);}
+  0% {box-shadow: 0px 0px 10px 0px rgba(28, 255, 134, 0.6);}
+  100% {box-shadow: 0px 0px 18px 0px rgba(28, 255, 134, 0.9);}
 }
 
 .pulseBox {
@@ -193,8 +193,84 @@ header{
 
 
 /* Projects ------------ */
-#projects {
+#projects h2{
     text-align: center;
+}
+
+.card{
+  background-color: #000; /* Black background */
+  background-size: 100px;
+  border-radius: 20px;
+  border: 20px;
+  /* For responsive width (better than fixed width with margin/padding) */
+  max-width: 60%; 
+  /* First param = Top and Bottom, Second param = Right and Left -> left for auto, max-width manages it */
+  margin: 50px auto;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  display: flex;
+}
+
+.card div{
+  /* Take up equal amount of space as figure (img)*/
+  flex: 1;
+  display: inline-block;
+  margin: 20px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.card div p{
+  font-size: 15px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.card div h3{
+  margin: 0px;
+  padding: 0px;
+}
+
+.card div h4 ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.card div h4 ul li{
+  display: inline-block;
+}
+
+.card div button{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Slightly raise the card on hover */
+  box-shadow: 0 4px 8px rgba(0, 255, 135, 0.3); /* Green glow effect */
+}
+
+.card figure {
+  /* Take up equal amount of space as div (description)*/
+  flex: 1;
+  padding: 0px;
+  float: right;
+  overflow: hidden;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.card figure img{
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+/* Content inside the card */
+.card-content {
+  /* Your content styles here */
 }
 /* ------------------------ */
 
