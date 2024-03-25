@@ -238,6 +238,19 @@ header{
 
 .card div h4 ul li{
   display: inline-block;
+  /* Aligns logos so they're centered with respect to "Tools:" text */
+  vertical-align: middle;
+  margin: 4px;
+}
+
+.logo{
+  width: 30px;
+  height: 30px;
+  transition: all 0.2s ease-in-out;
+}
+
+.logo:hover{
+  transform: scale(1.67); /* 50/30 = 1.67 */
 }
 
 .card div button{
