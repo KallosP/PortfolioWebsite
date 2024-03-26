@@ -340,6 +340,35 @@ header{
 #education{
     text-align: center;
 }
+
+#ed-card{
+  /* For responsive width (better than fixed width with margin/padding) */
+  max-width: 45%; 
+  max-height: 10%;
+  /* First param = Top and Bottom, Second param = Right and Left -> left for auto, max-width manages it */
+  transition: none;
+  /* Aligns items vertically and horizontally */
+  align-items: center;
+}
+
+#ed-card:hover{
+  transform: none;
+}
+
+#ed-card div h3{
+  margin-bottom: 10px;
+}
+
+#ed-card div p{
+  margin: auto;
+  padding: 5px;
+}
+
+#ed-card figure{
+  float: left;
+}
+
+
 /* ------------------------ */
 
 /* Contact ------------ */
