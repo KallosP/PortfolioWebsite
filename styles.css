@@ -280,17 +280,60 @@ header{
   width: 100%;
   object-fit: contain;
 }
-
-/* Content inside the card */
-.card-content {
-  /* Your content styles here */
-}
 /* ------------------------ */
 
 /* Skills ------------ */
 #skills {
     text-align: center;
 }
+
+#skills div{
+  background-size: 100px;
+  border-radius: 20px;
+  border: 20px;
+  /* For responsive width (better than fixed width with margin/padding) */
+  max-width: 60%; 
+  /* First param = Top and Bottom, Second param = Right and Left -> left for auto, max-width manages it */
+  margin: 50px auto;
+  display: flex;
+}
+
+#skills div ul{
+  list-style-type: none;
+  margin: 40px;
+  padding: 0px;
+}
+
+#skills div ul li{
+  height: auto;
+  width: 90px;
+  display: inline-block;
+  /* Aligns logos so they're centered with respect to "Tools:" text */
+  vertical-align: middle;
+  margin: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+#skills div ul li figure{
+  text-align: center;
+  margin: 0;
+}
+
+#skills div ul li figure img{
+  display: block;
+  margin: 0 auto;
+  height: auto;
+  width: 100%;
+}
+
+#skills div ul li figure figcaption{
+  margin-top: 10px;
+}
+
+#skills div ul li:hover{
+  transform: scale(1.30); 
+}
+
 /* ------------------------ */
 
 /* Education ------------ */
