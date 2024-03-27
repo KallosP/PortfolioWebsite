@@ -132,7 +132,6 @@ header{
   -moz-animation-timing-function: ease-in-out;
   -o-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
-  border: 0px;
 }
 /*-----------*/
 
@@ -141,6 +140,8 @@ header{
   appearance: none;
   border-radius: 15px;
   border-color: rgb(28, 255, 134);
+  border-style: solid;
+  border-width: 2px;
   background-color: rgba(28, 255, 134, 0.151);
   padding: 10px 15px 10px 15px;
   box-sizing: border-box;
@@ -201,7 +202,8 @@ header{
   background-color: #000; /* Black background */
   background-size: 100px;
   border-radius: 20px;
-  border: 20px;
+  border: solid;
+  border-width: 2px;
   /* For responsive width (better than fixed width with margin/padding) */
   max-width: 60%; 
   /* First param = Top and Bottom, Second param = Right and Left -> left for auto, max-width manages it */
@@ -367,25 +369,61 @@ header{
 #ed-card figure{
   float: left;
 }
-
-
 /* ------------------------ */
 
 /* Contact ------------ */
 #contact {
-    text-align: center;
+  text-align: center;
+}
+
+#contact div{
+  max-width: 50%; 
+  /* First param = Top and Bottom, Second param = Right and Left -> left for auto, max-width manages it */
+  margin: 20px auto 50px auto;
+}
+
+#contact div form{
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.input-field{
+  width: 100%;
+  padding: 20px;
+  margin: 10px 0px;
+  box-sizing: border-box;
+  font-family: "Poppins Regular";
+  background: transparent;
+  background-color: rgba(28, 255, 134, 0.151);
+  color: rgb(100, 255, 167);
+  border-color: rgb(100, 255, 167);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  transition: border-color 0.3s ease;
+  transition: background-color 0.4s ease;
+}
+
+.input-field:focus{
+  outline: none;
+  border-color: rgb(94, 94, 94);
+}
+
+#message{
+  height: 300px;
+}
+
+::placeholder{
+  color: rgb(100, 255, 167);
+}
+
+#contact button{
+  margin-top: 20px;
 }
 /* ------------------------ */
-
-
 
 section{
     padding: 20px;
     color: rgb(28, 255, 134);
-}
-
-footer{
-    background: black;
-    color: white;
-    padding: 10px;
 }
