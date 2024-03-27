@@ -9,7 +9,7 @@ window.onload = function () {
         // Remove the pulseBox class from all elements with input-field class
         inputField[i].addEventListener('focus', function () {
             this.classList.remove('pulseBox')
-            this.style.backgroundColor = 'transparent';
+            this.style.backgroundColor = '#131313';
         });
 
         // Re-add the pulseBox class

@@ -200,8 +200,7 @@ header{
 }
 
 .card{
-  background-color: #000; /* Black background */
-  background-size: 100px;
+  background-color: #131313; /* Black background */
   border-radius: 20px;
   border: solid;
   border-width: 2px;
