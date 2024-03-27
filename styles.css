@@ -51,6 +51,7 @@ header{
     color: rgb(28, 255, 134);
     text-align: center;
     text-decoration: none;
+    padding: 10px;
 }
 
 #navbar li:hover{
@@ -426,4 +427,8 @@ header{
 section{
     padding: 20px;
     color: rgb(28, 255, 134);
+}
+
+html{
+  scroll-behavior: smooth;
 }
