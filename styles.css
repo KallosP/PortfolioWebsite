@@ -22,17 +22,30 @@ body{
     padding = the space inside the body
 */
 
+section::before {
+  content: "";
+  display: block;
+  height: 20px; /* Same height as your navbar's padding */
+  margin: -20px 0 0; /* Negative margin equal to height */
+  padding-top: 20px; /* Same height as your navbar's padding */
+  margin-top: -20px; /* Negative margin equal to padding */
+}
+
 /* Nav bar ------------ */
 header{
     background: black;
     color: rgb(28, 255, 134);
-    padding: 20px;
-
+    /* Controls stacking order of elements */
+    z-index: 1000;
     /* Creates sticky effect for nav bar */
     position: sticky;
     top: 0;
 }
 
+#navbar {
+
+  padding: 20px;
+}
 
 #navbar ul{
     list-style-type: none;
