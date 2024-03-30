@@ -54,7 +54,7 @@
                 <p>an undergraduate computer science student with a passion for software and all things technology.</p>
             </div>
             <ul>
-                <!-- HTML !-->
+                <!-- HTML -->
                 <!--<button class="button-27" role="button">Button 27</button>-->
                 <li><a href="https://github.com/KallosP" target="_blank"><button class="button-27 pulseBox"
                             role="button">GitHub</button></a></li>
@@ -318,12 +318,14 @@
         <h2 class="title">Contact</h2>
         <p>For any inquiries please use the form below.</p>
         <div>
-            <form>
-                <input type="text" placeholder="Email" id="email" class="item pulseBox input-field" autocomplete="off">
+            <form id="form" action="https://formsubmit.co/pkallos19@gmail.com" method="POST">
+                <input name="email" type="text" placeholder="Email" id="email" class="item pulseBox input-field"
+                    autocomplete="off" required>
 
-                <textarea id="message" placeholder="Message" class="item pulseBox input-field" autocomplete="off"></textarea>
+                <textarea name="message" id="message" placeholder="Message" class="item pulseBox input-field"
+                    autocomplete="off" required></textarea>
 
-                <button class="button-27 pulseBox">Send Message</button>
+                <button type="submit" class="button-27 pulseBox">Send Message</button>
             </form>
         </div>
 

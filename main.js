@@ -19,4 +19,11 @@ window.onload = function () {
         });
 
     }
+
+    // Alert for redirect on message submission
+    document.getElementById('form').addEventListener('submit', function (e) {
+        setTimeout(function(){
+            alert("Redirecting for a quick security check. Afterwards, a confirmation will be provided if your message was sent. \n\nThanks for your patience!");
+        }, 500);
+    });
 }
