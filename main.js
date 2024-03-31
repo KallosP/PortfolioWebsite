@@ -2,32 +2,14 @@
 window.onload = function () {
 
 
+    /* Cursor trail by https://www.youtube.com/@codemorphism */
     const coords = { x: 0, y: 0 };
     const circles = document.querySelectorAll(".circle");
 
     const colors = [
-        "#ffb56b",
-        "#fdaf69",
-        "#f89d63",
-        "#f59761",
-        "#ef865e",
-        "#ec805d",
-        "#e36e5c",
-        "#df685c",
-        "#d5585c",
-        "#d1525c",
-        "#c5415d",
-        "#c03b5d",
-        "#b22c5e",
-        "#ac265e",
-        "#9c155f",
-        "#950f5f",
-        "#830060",
-        "#7c0060",
-        "#680060",
-        "#60005f",
-        "#48005f",
-        "#3d005e"
+        "#1cff86", "#11fd7f", "#07fa79", "#07ee72", "#08df6d", "#0ad167", "#0bc361", "#0cb55b", "#0da855", "#0e9a4f", "#0e8d49", "#0e8043",
+        "#0e8043", "#0d743d", "#0b6937", "#0a5d31", "#09512b", "#084625", "#063a1e", "#052f18", "#042312", "#03170c", "#010c06", "#000000"
+
     ];
 
     circles.forEach(function (circle, index) {
@@ -92,20 +74,3 @@ window.onload = function () {
         }, 500);
     });
 }
-
-/*$(document).ready(function(){
-    jQuery(function($) {
-    $('.bg-aura-effect').mouseenter(function() {
-      // Add the aura element on hover
-      $(this).append('<div class="aura-element"></div>');
-    }).mousemove(function(e) {
-      // Move the aura element to follow the pointer
-      let x = e.clientX - this.getBoundingClientRect().left;
-      let y = e.clientY - this.getBoundingClientRect().top;
-      $(this).find('.aura-element').css({ top: y, left: x });
-    }).mouseleave(function() {
-      // Remove the aura element when leaving the element
-      $(this).find('.aura-element').remove();
-    });
-  });
-});*/
