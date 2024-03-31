@@ -7,6 +7,36 @@
     src: url('fonts/Poppins-Bold.ttf') format('truetype');
 }
 
+/* Aura effect */
+/*.bg-aura-effect {
+  position: relative;
+  z-index: 1;
+  /* Add other styles for your container element 
+}
+
+/* Aura element styles 
+.bg-aura-effect .aura-element {
+  position: absolute;
+  width: 800px; /* Adjust the size of the aura element as needed 
+  height: 800px;
+  background: radial-gradient(rgba(28, 255, 134, 0.267), transparent); /* Radial gradient 
+  border-radius: 50%; /* Make it circular 
+  pointer-events: none; /* Prevent the aura element from blocking mouse events 
+  z-index: 9999; /* Place the aura element above the background 
+  transform: translate(-50%, -50%); /* Center the aura element on the cursor 
+}*/
+
+.circle {
+  height: 24px;
+  width: 24px;
+  border-radius: 24px;
+  background-color: rgb(255, 255, 255);
+  position: fixed; 
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999999; /* so that it stays on top of all other elements */
+}
 
 body{
     background: rgb(5, 5, 5);
