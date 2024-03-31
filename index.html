@@ -19,9 +19,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <!-- jQuery script (for aura effect) -->
-    <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"> </script>
-    <script src="main.js"></script>
+
+    <script defer src="main.js"></script>
 </head>
 
 <!-- TODO:  - snap scrolling
@@ -79,25 +78,24 @@
     <section id="intro">
         <div class="info">
             <div>
-                <h2>My Name is Peter Kallos</h2>
-                <p>an undergraduate computer science student with a passion for software and all things technology.
+                <h2 class="hidden-left intro-anim-intro">My Name is Peter Kallos</h2>
+                <p class="hidden-right intro-anim-intro">an undergraduate computer science student with a passion for software and all things technology.
                 </p>
             </div>
             <ul>
                 <!-- HTML -->
-                <!--<button class="button-27" role="button">Button 27</button>-->
-                <li><a href="https://github.com/KallosP" target="_blank"><button class="button-27 pulseBox"
+                <li class="hidden-left intro-anim-button"><a href="https://github.com/KallosP" target="_blank"><button class="button-27 pulseBox"
                             role="button">GitHub</button></a></li>
-                <li><a href="https://www.linkedin.com/in/peter-kallos/" target="_blank"><button
+                <li class="hidden-right intro-anim-button"><a href="https://www.linkedin.com/in/peter-kallos/" target="_blank"><button
                             class="button-27 pulseBox" role="button">LinkedIn</button></a></li>
             </ul>
         </div>
     </section>
     <!-- Projects -->
     <section id="projects">
-        <h2 class="title">My Work</h2>
+        <h2 class="title hidden-left">My Work</h2>
         <div>
-            <div class="card pulseBox">
+            <div class="card pulseBox hidden-right proj-anim">
                 <div>
                     <h3>Interactive Campus Map</h3>
                     <h4>
@@ -132,7 +130,7 @@
                     </div>
                 </figure>
             </div>
-            <div class="card pulseBox">
+            <div class="card pulseBox hidden-left proj-anim">
                 <div>
                     <h3>Virtual World</h3>
                     <h4>
@@ -157,7 +155,7 @@
                     </div>
                 </figure>
             </div>
-            <div class="card pulseBox">
+            <div class="card pulseBox hidden-right proj-anim">
                 <div>
                     <h3>Text-Based RPG</h3>
                     <h4>
@@ -183,7 +181,7 @@
                     </div>
                 </figure>
             </div>
-            <div class="card pulseBox">
+            <div class="card pulseBox hidden-left proj-anim">
                 <div>
                     <h3>Dice 10,000</h3>
                     <h4>
@@ -211,106 +209,106 @@
     </section>
     <!-- Skills -->
     <section id="skills">
-        <h2 class="title">Skills</h2>
+        <h2 class="title hidden-right">Skills</h2>
         <div>
             <ul>
-                <li>
+                <li class="hidden-left skill-anim">
                     <figure>
                         <img src="/images/java.svg" alt="Java">
                         <figcaption>Java</figcaption>
                     </figure>
                 </li>
-                <li>
+                <li class="hidden-left skill-anim">
                     <figure>
                         <img src="/images/c-programming.svg" alt="C">
                         <figcaption>C</figcaption>
                     </figure>
                 </li>
-                <li>
+                <li class="hidden-left skill-anim">
                     <figure>
                         <img src="/images/c++.svg" alt="C++">
                         <figcaption>C++</figcaption>
                     </figure>
                 </li>
-                <li>
+                <li class="hidden-left skill-anim">
                     <figure>
                         <img src="/images/c-sharp.svg" alt="C#">
                         <figcaption>C#</figcaption>
                     </figure>
                 </li>
-                <li>
+                <li class="hidden-left skill-anim">
                     <figure>
                         <img src="/images/html-language.svg" alt="HTML">
                         <figcaption>HTML</figcaption>
                     </figure>
                 </li>
-                <li>
+                <li class="hidden-left skill-anim">
                     <figure>
                         <img src="/images/css-language.svg" alt="CSS">
                         <figcaption>CSS</figcaption>
                     </figure>
                 </li>
-                <li>
+                <li class="hidden-left skill-anim">
                     <figure>
                         <img src="/images/python.svg" alt="Python">
                         <figcaption>Python</figcaption>
                     </figure>
                 </li>
-                <li>
+                <li class="hidden-left skill-anim">
                     <figure>
                         <img src="/images/dart.svg" alt="Dart">
                         <figcaption>Dart</figcaption>
                     </figure>
                 </li>
-                <li>
+                <li class="hidden-left skill-anim">
                     <figure>
                         <img src="/images/flutter.svg" alt="Flutter">
                         <figcaption>Flutter</figcaption>
                     </figure>
                 </li>
-                <li>
+                <li class="hidden-left skill-anim">
                     <figure>
                         <img src="/images/github.svg" alt="GitHub">
                         <figcaption>GitHub</figcaption>
                     </figure>
                 </li>
-                <li>
+                <li class="hidden-left skill-anim">
                     <figure>
                         <img src="/images/git.svg" alt="Git">
                         <figcaption>Git</figcaption>
                     </figure>
                 </li>
-                <li>
+                <li class="hidden-left skill-anim">
                     <figure>
                         <img src="/images/ubuntu.svg" alt="Ubuntu">
                         <figcaption>Ubuntu</figcaption>
                     </figure>
                 </li>
-                <li>
+                <li class="hidden-left skill-anim">
                     <figure>
                         <img src="/images/android-studio.svg" alt="Android Studio">
                         <figcaption>Android Studio</figcaption>
                     </figure>
                 </li>
-                <li>
+                <li class="hidden-left skill-anim">
                     <figure>
                         <img src="/images/neovim.svg" alt="Neovim">
                         <figcaption>Neovim</figcaption>
                     </figure>
                 </li>
-                <li>
+                <li class="hidden-left skill-anim">
                     <figure>
                         <img src="/images/unity.svg" alt="Unity">
                         <figcaption>Unity</figcaption>
                     </figure>
                 </li>
-                <li>
+                <li class="hidden-left skill-anim">
                     <figure>
                         <img src="/images/trello.svg" alt="Trello">
                         <figcaption>Trello</figcaption>
                     </figure>
                 </li>
-                <li>
+                <li class="hidden-left skill-anim">
                     <figure>
                         <img src="/images/figma.svg" alt="Figma">
                         <figcaption>Figma</figcaption>
@@ -321,8 +319,8 @@
     </section>
     <!-- Education -->
     <section id="education">
-        <h2 class="title">Education</h2>
-        <div id="ed-card" class="card pulseBox">
+        <h2 class="title hidden-right">Education</h2>
+        <div id="ed-card" class="card pulseBox hidden-left">
             <figure>
                 <img src="/images/CalPoly_Seal.png" alt="Cal Poly Seal">
             </figure>
@@ -334,7 +332,7 @@
                 <p>Fall 2023 Dean's List</p>
             </div>
         </div>
-        <div id="ed-card" class="card pulseBox">
+        <div id="ed-card" class="card pulseBox hidden-right">
             <figure>
                 <img src="/images/avc-logo.png" alt="AVC Logo">
             </figure>
@@ -353,17 +351,17 @@
     </section>
     <!-- Contact -->
     <section id="contact">
-        <h2 class="title">Contact</h2>
-        <p>For any inquiries please use the form below.</p>
+        <h2 class="title hidden-left">Contact</h2>
+        <p class="hidden-right">For any inquiries please use the form below.</p>
         <div>
             <form id="form" action="https://formsubmit.co/pkallos19@gmail.com" method="POST">
-                <input name="email" type="text" placeholder="Email" id="email" class="item pulseBox input-field"
+                <input name="email" type="text" placeholder="Email" id="email" class="item pulseBox input-field hidden-left"
                     autocomplete="off" required>
 
-                <textarea name="message" id="message" placeholder="Message" class="item pulseBox input-field"
+                <textarea name="message" id="message" placeholder="Message" class="item pulseBox input-field hidden-right"
                     autocomplete="off" required></textarea>
 
-                <button type="submit" class="button-27 pulseBox">Send Message</button>
+                <button type="submit" class="button-27 pulseBox hidden-left">Send Message</button>
             </form>
         </div>
 

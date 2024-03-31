@@ -1,8 +1,25 @@
 // window.onload = waits for the window to fully load, then executes the javascript code
 window.onload = function () {
 
+    /* Scroll animations - credit: https://www.youtube.com/@beyondfireship */
+    const observer = new IntersectionObserver( (entries) => {
+        entries.forEach( (entry) => {
+            console.log(entry);
+            if(entry.isIntersecting){
+                entry.target.classList.add('show');
+            }
+            else{
+                entry.target.classList.remove('show');
+            }
+        });
+    });
 
-    /* Cursor trail by https://www.youtube.com/@codemorphism */
+    const hiddenElementsLeft = document.querySelectorAll('.hidden-left');
+    hiddenElementsLeft.forEach( (el) => observer.observe(el) );
+    const hiddenElementsRight = document.querySelectorAll('.hidden-right');
+    hiddenElementsRight.forEach( (el) => observer.observe(el) );
+
+    /* Cursor trail - credit: https://www.youtube.com/@codemorphism */
     const coords = { x: 0, y: 0 };
     const circles = document.querySelectorAll(".circle");
 
@@ -47,6 +64,7 @@ window.onload = function () {
 
     animateCircles();
 
+    /* Contact input field animations (on focus/click) */
     // A reference to all elements with input-field class
     var inputField = document.getElementsByClassName('input-field');
 
