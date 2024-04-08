@@ -2,25 +2,25 @@
 window.onload = function () {
 
     /* Scroll animations - credit: https://www.youtube.com/@beyondfireship */
-    const observer = new IntersectionObserver( (entries) => {
-        entries.forEach( (entry) => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
             console.log(entry);
-            if(entry.isIntersecting){
+            if (entry.isIntersecting) {
                 entry.target.classList.add('show');
             }
-            else{
+            else {
                 entry.target.classList.remove('show');
             }
         });
     });
 
     const hiddenElementsLeft = document.querySelectorAll('.hidden-left');
-    hiddenElementsLeft.forEach( (el) => observer.observe(el) );
+    hiddenElementsLeft.forEach((el) => observer.observe(el));
     const hiddenElementsRight = document.querySelectorAll('.hidden-right');
-    hiddenElementsRight.forEach( (el) => observer.observe(el) );
+    hiddenElementsRight.forEach((el) => observer.observe(el));
 
     /* Cursor trail - credit: https://www.youtube.com/@codemorphism */
-    const coords = { x: 0, y: 0 };
+    /*const coords = { x: 0, y: 0 };
     const circles = document.querySelectorAll(".circle");
 
     const colors = [
@@ -62,11 +62,23 @@ window.onload = function () {
         requestAnimationFrame(animateCircles);
     }
 
-    animateCircles();
+    animateCircles();*/
+
+    /* Cursor tracking for aura - credit: https://codepen.io/lcstep/pen/OZmqOy */
+    document.addEventListener('mousemove', function (e) {
+        let sunElement = document.querySelector('.aura');
+        if (sunElement) {
+            /* Note: offset must be half of .aura width and height */
+            sunElement.style.left = e.pageX - 450 + 'px';
+            sunElement.style.top = e.pageY - 450 + 'px';
+        }
+    });
+
 
     /* Contact input field animations (on focus/click) */
     // A reference to all elements with input-field class
     var inputField = document.getElementsByClassName('input-field');
+    var aura = document.getElementById('cursor-effect');
 
     // Add event listeners to all elements
     for (var i = 0; i < inputField.length; ++i) {
@@ -74,13 +86,15 @@ window.onload = function () {
         // Remove the pulseBox class from all elements with input-field class
         inputField[i].addEventListener('focus', function () {
             this.classList.remove('pulseBox')
-            this.style.backgroundColor = '#131313';
+            this.style.backgroundColor = '#232323' /*131313*/;
+            aura.classList.remove('aura');
         });
 
         // Re-add the pulseBox class
         inputField[i].addEventListener('blur', function () {
             this.classList.add('pulseBox')
             this.style.backgroundColor = 'rgba(28, 255, 134, 0.151)';
+            aura.classList.add('aura');
         });
 
     }

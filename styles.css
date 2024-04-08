@@ -7,6 +7,16 @@
     src: url('fonts/Poppins-Bold.ttf') format('truetype');
 }
 
+:root{
+  --text-color: white;
+  --bckgd-color: rgb(24, 28, 28);
+  --button-color: rgb(55, 152, 106);
+  --border-color: rgb(55, 152, 106);/*rgb(63, 63, 63); */
+  --bright-green: rgb(28, 255, 134);
+  --bubble-text: rgb(114, 189, 154); 
+  --easy-green-text: rgb(62, 207, 142);
+}
+
 .circle {
   height: 24px;
   width: 24px;
@@ -19,9 +29,24 @@
   z-index: 99999999; /* so that it stays on top of all other elements */
 }
 
+/* FIXME: aura at bottom of screen extends it forever */
+.aura {
+  height: 900px;
+  width: 900px;
+  z-index: 9999;
+  background: var(--button-color);
+  background: radial-gradient(circle, rgba(0, 255, 119, 0.082) 0%,  rgba(255,255,255,0) 70%);
+	background-repeat: no-repeat;
+	background-position: center;
+  position: absolute;
+  /* Allows mouse events to pass through aura */
+  pointer-events: none; 
+  overflow: hidden;
+}
+
 body{
-    background: rgb(5, 5, 5);
-    background-image: url("images/stars-background.jpg");
+    background: var(--bckgd-color);
+    /*background-image: url("images/stars-background.jpg");*/
     background-attachment: fixed;
     background-size: cover;
     /* Removes edge borders */
@@ -83,8 +108,7 @@ section::before {
 
 /* Nav bar ------------ */
 header{
-    background: black;
-    color: rgb(28, 255, 134);
+    background: var(--bckgd-color);
     /* Controls stacking order of elements */
     z-index: 1000;
     /* Creates sticky effect for nav bar */
@@ -93,6 +117,7 @@ header{
 }
 
 #navbar {
+  border-bottom: 1px solid var(--button-color);
   padding: 20px;
 }
 
@@ -110,7 +135,7 @@ header{
 }
 
 #navbar li a{
-    color: rgb(28, 255, 134);
+    color: var(--text-color);
     text-align: center;
     text-decoration: none;
     padding: 10px;
@@ -131,11 +156,17 @@ header{
 /* Intro ------------ */
 
 #intro {
-    height: 100vh;
+    height: 90vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; 
     text-align: center;
+    color: var(--text-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+#intro h2{
+  color: var(--easy-green-text);
 }
 
 #intro ul{
@@ -150,7 +181,6 @@ header{
 }
 
 #intro li a{
-    color: rgb(28, 255, 134);
     text-align: center;
     text-decoration: none;
 }
@@ -166,23 +196,23 @@ header{
 
 /* Pulsing effect ----- (Credit: https://codepen.io/asp/pen/MWbxOz) ------*/
 @-webkit-keyframes pulseBox {
-  0% {-webkit-box-shadow: 0px 0px 10px 0px rgba(28, 255, 134, 0.6);}
-  100% {-webkit-box-shadow: 0px 0px 18px 0px rgba(28, 255, 134, 0.9);}
+  0% {-webkit-box-shadow: 0px 0px 4px 0px rgba(28, 255, 134, 0.6);}
+  100% {-webkit-box-shadow: 0px 0px 10px 0px rgba(28, 255, 134, 0.9);}
 }
 @-moz-keyframes pulseBox {
-  0% {-moz-box-shadow: 0px 0px 10px 0px rgba(28, 255, 134, 0.6);}
-  100% {-moz-box-shadow: 0px 0px 18px 0px rgba(28, 255, 134, 0.9);}
+  0% {-moz-box-shadow: 0px 0px 4px 0px rgba(28, 255, 134, 0.6);}
+  100% {-moz-box-shadow: 0px 0px 10px 0px rgba(28, 255, 134, 0.9);}
 }
 @-o-keyframes pulseBox {
-  0% {-o-box-shadow: 0px 0px 10px 0px rgba(28, 255, 134, 0.6);}
-  100% {-o-box-shadow: 0px 0px 18px 0px rgba(28, 255, 134, 0.9);}
+  0% {-o-box-shadow: 0px 0px 4px 0px rgba(28, 255, 134, 0.6);}
+  100% {-o-box-shadow: 0px 0px 10px 0px rgba(28, 255, 134, 0.9);}
 }
 @keyframes pulseBox {
-  0% {box-shadow: 0px 0px 10px 0px rgba(28, 255, 134, 0.6);}
-  100% {box-shadow: 0px 0px 18px 0px rgba(28, 255, 134, 0.9);}
+  0% {box-shadow: 0px 0px 4px 0px rgba(28, 255, 134, 0.6);}
+  100% {box-shadow: 0px 0px 10px rgba(28, 255, 134, 0.9);}
 }
 
-.pulseBox {
+/*.pulseBox {
   -webkit-animation-name: pulseBox;
   -moz-animation-name: pulseBox;
   -o-animation-name: pulseBox;
@@ -212,11 +242,11 @@ header{
   border-radius: 15px;
   border-color: rgb(28, 255, 134);
   border-style: solid;
-  border-width: 2px;
-  background-color: rgba(28, 255, 134, 0.151);
+  border-width: 1px;
+  background-color: var(--button-color);
   padding: 10px 15px 10px 15px;
   box-sizing: border-box;
-  color: rgb(28, 255, 134);
+  color: var(--text-color);
   cursor: pointer;
   display: inline-block;
   font-size: 16px;
@@ -234,8 +264,8 @@ header{
 }
 
 .button-27:hover {
-  box-shadow: rgba(100, 255, 167, 0.25) 0 8px 15px;
-  transform: translateY(-4px);
+  /*box-shadow: rgba(100, 255, 167, 0.25) 0 8px 15px;*/
+  transform: translateY(-2px);
   background-color: rgba(98, 255, 166, 0.445);;
 }
 
@@ -272,15 +302,22 @@ header{
 /* ------------------------ */
 
 /* Projects ------------ */
+#projects{
+  border-bottom: 1px solid var(--border-color);
+}
+
 #projects h2{
+    color: var(--text-color);
     text-align: center;
 }
 
 .card{
-  background-color: #131313; /* Black background */
+  background-color: rgb(24, 30, 28); /* Black background */
   border-radius: 20px;
   border: solid;
-  border-width: 2px;
+  border-color: var(--bright-green);
+  border-width: 1px;
+  color: var(--text-color);
   /* For responsive width (better than fixed width with margin/padding) */
   max-width: 60%; 
   /* First param = Top and Bottom, Second param = Right and Left -> left for auto, max-width manages it */
@@ -337,7 +374,7 @@ header{
 }
 
 .card:hover {
-  box-shadow: 0 4px 8px rgba(0, 255, 135, 0.3); /* Green glow effect */
+  /*box-shadow: 0 4px 8px rgba(0, 255, 135, 0.3); /* Green glow effect */
 }
 
 .card figure {
@@ -352,6 +389,7 @@ header{
 }
 
 .card figure img{
+  border: 1px solid var(--bright-green);
   border-radius: 20px;
   height: 100%;
   width: 100%;
@@ -366,7 +404,9 @@ header{
 
 /* Skills ------------ */
 #skills {
+    color: var(--text-color);
     text-align: center;
+    border-bottom: 1px solid var(--border-color);
 }
 
 #skills div{
@@ -377,6 +417,7 @@ header{
   max-width: 60%; 
   /* First param = Top and Bottom, Second param = Right and Left -> left for auto, max-width manages it */
   margin: 50px auto;
+  margin-top: 0px;
   display: flex;
 }
 
@@ -420,7 +461,9 @@ header{
 
 /* Education ------------ */
 #education{
+    color: var(--text-color);
     text-align: center;
+    border-bottom: 1px solid var(--border-color);
 }
 
 #ed-card{
@@ -445,10 +488,20 @@ header{
 #ed-card figure{
   float: left;
 }
+
+#ed-card figure img{
+  border: 0px; 
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
 /* ------------------------ */
 
 /* Contact ------------ */
 #contact {
+  color: var(--text-color);
   text-align: center;
 }
 
@@ -471,11 +524,11 @@ header{
   box-sizing: border-box;
   font-family: "Poppins Regular";
   background: transparent;
-  background-color: rgba(28, 255, 134, 0.151);
-  color: rgb(100, 255, 167);
+  background-color:rgba(28, 255, 134, 0.151);
+  color: var(--text-color);
   border-color: rgb(100, 255, 167);
   border-style: solid;
-  border-width: 2px;
+  border-width: 1px;
   border-radius: 10px;
   transition: border-color 0.3s ease, background-color 0.4s ease, transform 0.4s ease;
   resize: none;
@@ -491,7 +544,7 @@ header{
 }
 
 ::placeholder{
-  color: rgb(100, 255, 167);
+  color: var(--bubble-text);
 }
 
 #contact button{
