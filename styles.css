@@ -154,6 +154,12 @@ header{
 #navbar li:active{
   transform: translateY(0);
 }
+
+@media only screen and (max-width: 1200px) {
+  #navbar li{
+    margin: 0px 5px 0px 0px;
+  }
+}
 /* ------------------------ */
 
 
@@ -298,15 +304,9 @@ header{
 
 /* ------------------------ */
 
-/* Misc ----------------- */
-.title{
-  font-family: "Poppins Regular";
-  font-size: 30px;
-  transition: 800ms;
-}
-/* ------------------------ */
 
 /* Projects ------------ */
+
 #projects{
   border-bottom: 1px solid var(--border-color);
 }
@@ -405,9 +405,19 @@ header{
   transition-delay: 200ms;
 }
 
+@media only screen and (max-width: 1200px) {
+  .card {
+    flex-direction: column;
+    max-width: 80%;
+  }
+}
+
 /* ------------------------ */
 
 /* Skills ------------ */
+@media only screen and (max-width: 1200px) {
+  /* TODO: realign logos */
+}
 #skills {
     color: var(--text-color);
     text-align: center;
@@ -502,6 +512,16 @@ header{
   display: block;
   margin: auto;
 }
+
+@media only screen and (max-width: 1200px) {
+  #ed-card{
+    max-width: 95%;
+  }
+  #ed-card figure img{
+    max-width: 60%;
+  }
+}
+
 /* ------------------------ */
 
 /* Contact ------------ */
@@ -557,6 +577,7 @@ header{
 }
 /* ------------------------ */
 
+/* Misc ----------------- */
 section{
     padding: 20px;
     color: rgb(28, 255, 134);
@@ -587,3 +608,10 @@ section{
 html{
   scroll-behavior: smooth;
 }
+
+.title{
+  font-family: "Poppins Regular";
+  font-size: 30px;
+  transition: 800ms;
+}
+/* ------------------------ */
