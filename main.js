@@ -65,15 +65,82 @@ window.onload = function () {
     animateCircles();*/
 
     /* Cursor tracking for aura - credit: https://codepen.io/lcstep/pen/OZmqOy */
-    document.addEventListener('mousemove', function (e) {
+    /*document.addEventListener('mousemove', function (e) {
         let sunElement = document.querySelector('.aura');
         if (sunElement) {
-            /* Note: offset must be half of .aura width and height */
-            sunElement.style.left = e.pageX - 450 + 'px';
-            sunElement.style.top = e.pageY - 450 + 'px';
+            /* Note: offset must be half of .aura width and height 
+            sunElement.style.left = e.pageX - 50 + 'px';
+            sunElement.style.top = e.pageY - 50 + 'px';
         }
+    });*/
+
+    /*let sunElement = document.querySelector('.aura');
+    let targetX = 0, targetY = 0;
+    let currentX = 0, currentY = 0;
+    let speed = 0.08; // controls the speed of interpolation
+
+    function moveAura() {
+        currentX += (targetX - currentX) * speed;
+        currentY += (targetY - currentY) * speed;
+
+        sunElement.style.left = currentX - 50 + 'px';
+        sunElement.style.top = currentY - 50 + 'px';
+
+        requestAnimationFrame(moveAura);
+    }
+
+    document.addEventListener('mousemove', function (e) {
+        targetX = e.pageX;
+        targetY = e.pageY;
     });
 
+    moveAura();*/
+
+    let auraContainer = document.getElementById('cursor-effect');
+    let targetX = 0, targetY = 0;
+    let currentX = 0, currentY = 0;
+    let speed = 0.08; // controls the speed of interpolation
+
+    function createAura() {
+        let auraElement = document.createElement('div');
+        auraElement.className = 'aura';
+        auraContainer.appendChild(auraElement);
+        return auraElement;
+    }
+
+    let sunElement = createAura();
+
+    function moveAura() {
+        currentX += (targetX - currentX) * speed;
+        currentY += (targetY - currentY) * speed;
+
+        sunElement.style.left = currentX - 38 + 'px';
+        sunElement.style.top = currentY - 38 + 'px';
+
+        // Create a new aura at the current position
+        let newAura = createAura();
+        newAura.style.left = currentX - 38 + 'px';
+        newAura.style.top = currentY - 38 + 'px';
+
+        // Fade out the new aura over time
+        setTimeout(function () {
+            newAura.style.opacity = 0;
+        }, 0);
+
+        // Remove the new aura after it has faded out
+        setTimeout(function () {
+            auraContainer.removeChild(newAura);
+        }, 1000);
+
+        requestAnimationFrame(moveAura);
+    }
+
+    document.addEventListener('mousemove', function (e) {
+        targetX = e.pageX;
+        targetY = e.pageY;
+    });
+
+    moveAura();
 
     /* Contact input field animations (on focus/click) */
     // A reference to all elements with input-field class
@@ -87,14 +154,14 @@ window.onload = function () {
         inputField[i].addEventListener('focus', function () {
             this.classList.remove('pulseBox')
             this.style.backgroundColor = '#232323' /*131313*/;
-            aura.classList.remove('aura');
+            //aura.classList.remove('aura');
         });
 
         // Re-add the pulseBox class
         inputField[i].addEventListener('blur', function () {
             this.classList.add('pulseBox')
             this.style.backgroundColor = 'rgba(28, 255, 134, 0.151)';
-            aura.classList.add('aura');
+            //aura.classList.add('aura');
         });
 
     }

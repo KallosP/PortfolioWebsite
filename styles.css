@@ -31,17 +31,22 @@
 
 /* FIXME: aura at bottom of screen extends it forever */
 .aura {
-  height: 900px;
-  width: 900px;
+  height: 76px;
+  width: 76px;
   z-index: 9999;
   background: var(--button-color);
-  background: radial-gradient(circle, rgba(0, 255, 119, 0.082) 0%,  rgba(255,255,255,0) 70%);
+  background: radial-gradient(circle, rgba(62, 207, 142, 0.055) 10%,  rgba(255, 255, 255, 0) 70%);
 	background-repeat: no-repeat;
 	background-position: center;
   position: absolute;
   /* Allows mouse events to pass through aura */
   pointer-events: none; 
   overflow: hidden;
+    /* Add transition for smooth movement */
+  transition: top 0.3s, left 0.3s;
+  /* Add transition for fading out */
+  opacity: 1;
+  transition: opacity 1s;
 }
 
 body{
@@ -555,6 +560,28 @@ header{
 section{
     padding: 20px;
     color: rgb(28, 255, 134);
+}
+
+/* Scrollbar */
+/* This applies to all scrollable elements */
+::-webkit-scrollbar {
+    width: 15px; /* width of the entire scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #303030; /* color of the tracking area */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--easy-green-text); /* color of the scroll thumb */
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(62, 207, 142, 0.747); /* color of the scroll thumb on hover*/
 }
 
 html{
