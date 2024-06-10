@@ -1,20 +1,12 @@
 <!DOCTYPE html>
 <html>
-<!-- head is for metadata (data about data). metadata is data abou the HTML document.
-        meta data is not displayed -->
 
 <head>
     <meta charset="UTF-8">
-    <!-- used to represent the metatdata of the website. can be used to define various
-        attributes about your website and also make it responsive  -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- simply the name on the tab of your website -->
     <title>Peter Kallos' Website</title>
-    <!-- link tag used to link css file. also used to provide the small icon in the
-            browser tab for the logo (good website for generating that logo/icon:
-            https://favicon.io/favicon-generator/ -->
     <link rel="stylesheet" href="styles.css">
-    <!-- Favicon (custom tab icon) -->
+    <!-- Favicon (custom tab icon) (https://favicon.io/favicon-generator/)-->
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
@@ -32,40 +24,7 @@
              -->
 
 <body>
-    <!-- div = divider (content block), fills out whole screen left to right (CSS can change that)-->
-    <!-- semantic tags: 
-            - are all basically div tags but have specific use cases
-            - introduced to avoid having to always use divs
-            - ex: header, nav, section, footer (all these are divs but allows us to describe our webpage
-                in a way that it's a lot easier to read) -->
-
-    <!--
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>-->
-
-    <div id="cursor-effect"></div>
+    <!--<div id="cursor-effect" class="aura"></div>-->
 
     <!-- Nav bar -->
     <header>
@@ -362,6 +321,7 @@
             <form id="form" action="https://formsubmit.co/pkallos19@gmail.com" method="POST">
                 <input name="email" type="text" placeholder="Email" id="email" class="item pulseBox input-field hidden-left"
                     autocomplete="off" required>
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/pages/thankyou.html">
 
                 <textarea name="message" id="message" placeholder="Message" class="item pulseBox input-field hidden-right"
                     autocomplete="off" required></textarea>

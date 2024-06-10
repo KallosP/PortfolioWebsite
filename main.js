@@ -65,16 +65,16 @@ window.onload = function () {
     animateCircles();*/
 
     /* Cursor tracking for aura - credit: https://codepen.io/lcstep/pen/OZmqOy */
-    /*document.addEventListener('mousemove', function (e) {
+    document.addEventListener('mousemove', function (e) {
         let sunElement = document.querySelector('.aura');
         if (sunElement) {
-            /* Note: offset must be half of .aura width and height 
+            /* Note: offset must be half of .aura width and height*/ 
             sunElement.style.left = e.pageX - 50 + 'px';
             sunElement.style.top = e.pageY - 50 + 'px';
         }
-    });*/
+    });
 
-    /*let sunElement = document.querySelector('.aura');
+    let sunElement = document.querySelector('.aura');
     let targetX = 0, targetY = 0;
     let currentX = 0, currentY = 0;
     let speed = 0.08; // controls the speed of interpolation
@@ -94,9 +94,9 @@ window.onload = function () {
         targetY = e.pageY;
     });
 
-    moveAura();*/
+    moveAura();
 
-    let auraContainer = document.getElementById('cursor-effect');
+    /*let auraContainer = document.getElementById('cursor-effect');
     let targetX = 0, targetY = 0;
     let currentX = 0, currentY = 0;
     let speed = 0.08; // controls the speed of interpolation
@@ -140,36 +140,39 @@ window.onload = function () {
         targetY = e.pageY;
     });
 
-    moveAura();
+    moveAura();*/
 
-    /* Contact input field animations (on focus/click) */
-    // A reference to all elements with input-field class
-    var inputField = document.getElementsByClassName('input-field');
-    var aura = document.getElementById('cursor-effect');
-
-    // Add event listeners to all elements
-    for (var i = 0; i < inputField.length; ++i) {
-
-        // Remove the pulseBox class from all elements with input-field class
-        inputField[i].addEventListener('focus', function () {
-            this.classList.remove('pulseBox')
-            this.style.backgroundColor = '#232323' /*131313*/;
-            //aura.classList.remove('aura');
-        });
-
-        // Re-add the pulseBox class
-        inputField[i].addEventListener('blur', function () {
-            this.classList.add('pulseBox')
-            this.style.backgroundColor = 'rgba(28, 255, 134, 0.151)';
-            //aura.classList.add('aura');
-        });
-
-    }
-
-    // Alert for redirect on message submission
-    document.getElementById('form').addEventListener('submit', function (e) {
-        setTimeout(function () {
-            alert("Redirecting for a quick security check. Afterwards, a confirmation will be provided if your message was sent. \n\nThanks for your patience!");
-        }, 500);
-    });
+   
 }
+
+// Alert for redirect on message submission
+document.getElementById('form').addEventListener('submit', function (e) {
+    setTimeout(function () {
+        alert("Redirecting for a quick security check. \n\nThank you for your patience!");
+    }, 500);
+});
+
+/* Contact input field animations (on focus/click) */
+// A reference to all elements with input-field class
+var inputField = document.getElementsByClassName('input-field');
+// var aura = document.getElementById('cursor-effect');
+
+// Add event listeners to all elements
+for (var i = 0; i < inputField.length; ++i) {
+
+    // Change background color for all elements with input-field class 
+    inputField[i].addEventListener('focus', function () {
+        this.style.backgroundColor = '#232323' /*131313*/;
+        //this.classList.remove('pulseBox')
+        //aura.classList.remove('aura');
+    });
+
+    // Restore the background color
+    inputField[i].addEventListener('blur', function () {
+        this.style.backgroundColor = 'rgba(28, 255, 134, 0.151)';
+        //this.classList.add('pulseBox')
+        //aura.classList.add('aura');
+    });
+
+}
+
