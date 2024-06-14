@@ -1,3 +1,3 @@
 # PortfolioWebsite
 
-https://kallosp.github.io/peterkallos.github.io/
+https://kallosp.github.io/PortfolioWebsite/
