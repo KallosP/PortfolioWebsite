@@ -357,7 +357,7 @@ header {
   border-width: 1px;
   color: var(--text-color);
   /* For responsive width (better than fixed width with margin/padding) */
-  max-width: 60%;
+  max-width: 70%;
   /* First param = Top and Bottom, Second param = Right and Left -> left for auto, max-width manages it */
   margin: 50px auto;
   display: flex;
@@ -412,9 +412,9 @@ header {
   margin-bottom: 20px;
 }
 
-.card:hover {
-  /*box-shadow: 0 4px 8px rgba(0, 255, 135, 0.3); /* Green glow effect */
-}
+/*.card:hover {
+  /*box-shadow: 0 4px 8px rgba(0, 255, 135, 0.3); /* Green glow effect 
+}*/
 
 .card figure {
   /* Take up equal amount of space as div (description)*/
@@ -433,6 +433,8 @@ header {
   height: 100%;
   width: 100%;
   object-fit: contain;
+  max-height: 1920px;
+  max-width: 1080px;
 }
 
 .proj-anim {
@@ -464,7 +466,7 @@ header {
   border-radius: 20px;
   border: 20px;
   /* For responsive width (better than fixed width with margin/padding) */
-  max-width: 60%;
+  max-width: 70%;
   /* First param = Top and Bottom, Second param = Right and Left -> left for auto, max-width manages it */
   margin: 50px auto;
   margin-top: 0px;
