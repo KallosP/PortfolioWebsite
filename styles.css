@@ -437,6 +437,10 @@ header {
   max-width: 1080px;
 }
 
+.card a {
+  margin-right: 10px;
+}
+
 .proj-anim {
   transition-delay: 200ms;
 }
