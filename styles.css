@@ -16,7 +16,8 @@
   /*rgb(63, 63, 63); */
   --bright-green: rgb(28, 255, 134);
   --bubble-text: rgb(114, 189, 154);
-  --easy-green-text: rgb(62, 207, 142);
+  /*--easy-green-text: rgb(62, 207, 142);*/
+  --easy-green-text: rgb(88, 236, 170);
 }
 
 .circle {
@@ -280,7 +281,7 @@ header {
 /* Hover/Translation effect ----(Credit: https://getcssscan.com/css-buttons-examples) ----*/
 .button-27 {
   appearance: none;
-  border-radius: 15px;
+  border-radius: 5px;
   border-color: rgb(28, 255, 134);
   border-style: solid;
   border-width: 1px;
@@ -336,6 +337,27 @@ header {
 
 /* ------------------------ */
 
+/* Work Experience ------------ */
+
+#experience {
+  border-bottom: 1px solid var(--border-color);
+}
+
+#experience h2 {
+  color: var(--text-color);
+  text-align: center;
+}
+
+.green-text {
+  color: var(--easy-green-text);
+}
+
+.company-logo {
+  background-color: aliceblue;
+  padding: 10px;
+}
+
+/* ------------------------ */
 
 /* Projects ------------ */
 
@@ -351,7 +373,7 @@ header {
 .card {
   background-color: rgb(24, 30, 28);
   /* Black background */
-  border-radius: 20px;
+  border-radius: 1px;
   border: solid;
   border-color: var(--bright-green);
   border-width: 1px;
@@ -429,7 +451,7 @@ header {
 
 .card figure img {
   border: 1px solid var(--bright-green);
-  border-radius: 20px;
+  border-radius: 2px;
   height: 100%;
   width: 100%;
   object-fit: contain;
@@ -474,12 +496,31 @@ header {
   /* First param = Top and Bottom, Second param = Right and Left -> left for auto, max-width manages it */
   margin: 50px auto;
   margin-top: 0px;
+  border: var(--bright-green);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 1px;
   display: flex;
+  flex-direction: column;
+}
+
+.skill-section{
+  border-bottom: 1px solid var(--bright-green);
+}
+
+.skill-title{
+  border-bottom: 1px solid var(--bright-green);
+  width: max-content;  
+  align-self: center;
+}
+
+#skill-frontend-title {
+  margin-top: 32px;
 }
 
 #skills div ul {
   list-style-type: none;
-  margin: 40px;
+  margin: 20px;
   padding: 0px;
 }
 
@@ -596,7 +637,7 @@ header {
   border-color: rgb(100, 255, 167);
   border-style: solid;
   border-width: 1px;
-  border-radius: 10px;
+  border-radius: 1px;
   transition: border-color 0.3s ease, background-color 0.4s ease, transform 0.4s ease;
   resize: none;
 }
@@ -643,7 +684,7 @@ section {
 ::-webkit-scrollbar-thumb {
   background: var(--easy-green-text);
   /* color of the scroll thumb */
-  border-radius: 5px;
+  border-radius: 1px;
 }
 
 /* Handle on hover */

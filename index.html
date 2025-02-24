@@ -22,7 +22,6 @@
                 - responsive design (mobile screen size)
                 - light mode?
              -->
-
 <body>
     <!--<div id="cursor-effect" class="aura"></div>-->
 
@@ -31,6 +30,7 @@
         <nav id="navbar" class="sticky">
             <ul>
                 <li><a href="#intro">Home</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#education">Education</a></li>
@@ -55,9 +55,37 @@
             </ul>
         </div>
     </section>
+    <section id="experience">
+        <h2 class="title hidden-right">
+            Work <span class="hidden-right green-text">Experience</span>
+        </h2>
+        <div>
+            <div class="card pulseBox hidden-left proj-anim">
+                <div>
+                    <h3>Zoetic Motion • Software Engineer Intern</h3>
+                    <h4>
+                        Jan 2025 - Present
+                    </h4>
+                    <p>
+                        Implemented a revamped UI for Zoetic Motion's product website using React and Material UI. 
+                        Strong focus on building responsive web pages to support various screen sizes ranging from 
+                        desktop to mobile. Developed reusable components, dynamic user flows, and data handling logic
+                        while following React Bulletproof's project structure.
+                    </p>
+                    <a href="https://www.zoeticmotion.com/" target="_blank"><button
+                            class="button-27 pulseBox">Zoetic Motion</button></a>
+                </div>
+                <figure>
+                    <div>
+                        <img src="images/zoetic_motion_logo.png" alt="Zoetic Motion Logo" class="company-logo">
+                    </div>
+                </figure>
+            </div>
+        </div>
+    </section>
     <!-- Projects -->
     <section id="projects">
-        <h2 class="title hidden-left">My Work</h2>
+        <h2 class="title hidden-left">Recent <span class="hidden-right green-text">Projects</span></h2>
         <div>
             <div class="card pulseBox hidden-right proj-anim">
                 <div>
@@ -186,9 +214,35 @@
     </section>
     <!-- Skills -->
     <section id="skills">
-        <h2 class="title hidden-right">Skills</h2>
+        <h2 class="title hidden-right">Relevant <span class="hidden-right green-text">Skills</span></h2>
         <div>
-            <ul>
+            <h3 class="hidden-right skill-title" id="skill-frontend-title">Frontend</h3>
+            <ul class="skill-section">
+                <li class="hidden-left skill-anim">
+                    <figure>
+                        <img src="images/React.svg" alt="React Native">
+                        <figcaption>React</figcaption>
+                    </figure>
+                </li>
+                <li class="hidden-left skill-anim">
+                    <figure>
+                        <img src="images/tailwind.svg" alt="Tailwind">
+                        <figcaption>Tailwind</figcaption>
+                    </figure>
+                </li>
+                <li class="hidden-left skill-anim">
+                    <figure>
+                        <img src="images/vite.svg" alt="Vite">
+                        <figcaption>Vite</figcaption>
+                    </figure>
+                </li>
+                <li class="hidden-left skill-anim">
+                    <figure>
+                        <img src="images/materialui.svg" alt="Matieral UI">
+                        <figcaption>Material UI</figcaption>
+                    </figure>
+                </li>
+
                 <li class="hidden-left skill-anim">
                     <figure>
                         <img src="images/TypeScript.svg" alt="TypeScript">
@@ -196,6 +250,108 @@
                     </figure>
                 </li>
                 <li class="hidden-left skill-anim">
+                    <figure>
+                        <img src="images/JavaScript.svg" alt="TypeScript">
+                        <figcaption>JavaScript</figcaption>
+                    </figure>
+                </li>
+                <li class="hidden-left skill-anim">
+                    <figure>
+                        <img src="images/html-language.svg" alt="HTML">
+                        <figcaption>HTML</figcaption>
+                    </figure>
+                </li>
+                <li class="hidden-left skill-anim">
+                    <figure>
+                        <img src="images/css-language.svg" alt="CSS">
+                        <figcaption>CSS</figcaption>
+                    </figure>
+                </li>
+
+            </ul>
+            <h3 class="hidden-right skill-title">Backend</h3>
+            <ul class="skill-section">
+               <li class="hidden-left skill-anim">
+                    <figure>
+                        <svg viewBox="0 0 128 128" fill="white">
+                            <path d="M126.67 98.44c-4.56 1.16-7.38.05-9.91-3.75-5.68-8.51-11.95-16.63-18-24.9-.78-1.07-1.59-2.12-2.6-3.45C89 76 81.85 85.2 75.14 94.77c-2.4 3.42-4.92 4.91-9.4 3.7l26.92-36.13L67.6 29.71c4.31-.84 7.29-.41 9.93 3.45 5.83 8.52 12.26 16.63 18.67 25.21 6.45-8.55 12.8-16.67 18.8-25.11 2.41-3.42 5-4.72 9.33-3.46-3.28 4.35-6.49 8.63-9.72 12.88-4.36 5.73-8.64 11.53-13.16 17.14-1.61 2-1.35 3.3.09 5.19C109.9 76 118.16 87.1 126.67 98.44zM1.33 61.74c.72-3.61 1.2-7.29 2.2-10.83 6-21.43 30.6-30.34 47.5-17.06C60.93 41.64 63.39 52.62 62.9 65H7.1c-.84 22.21 15.15 35.62 35.53 28.78 7.15-2.4 11.36-8 13.47-15 1.07-3.51 2.84-4.06 6.14-3.06-1.69 8.76-5.52 16.08-13.52 20.66-12 6.86-29.13 4.64-38.14-4.89C5.26 85.89 3 78.92 2 71.39c-.15-1.2-.46-2.38-.7-3.57q.03-3.04.03-6.08zm5.87-1.49h50.43c-.33-16.06-10.33-27.47-24-27.57-15-.12-25.78 11.02-26.43 27.57z"></path>
+                        </svg>
+                        <figcaption>Express.js</figcaption>
+                    </figure>
+                </li>
+               <li class="hidden-left skill-anim">
+                    <figure>
+                        <img src="images/mongodb.svg" alt="MongoDB">
+                        <figcaption>MongoDB</figcaption>
+                    </figure>
+                </li>
+                <li class="hidden-left skill-anim">
+                    <figure>
+                        <img src="images/PostgreSQL.svg" alt="PostgreSQL">
+                        <figcaption>PostgreSQL</figcaption>
+                    </figure>
+                </li>
+                <li class="hidden-left skill-anim">
+                    <figure>
+                        <img src="images/supabase.svg" alt="Supabase">
+                        <figcaption>Supabase</figcaption>
+                    </figure>
+                </li>
+                <li class="hidden-left skill-anim">
+                    <figure>
+                        <img src="images/docker.svg" alt="Docker">
+                        <figcaption>Docker</figcaption>
+                    </figure>
+                </li>
+                <li class="hidden-left skill-anim">
+                    <figure>
+                        <img src="images/postman.svg" alt="Postman">
+                        <figcaption>Postman</figcaption>
+                    </figure>
+                </li>
+                <li class="hidden-left skill-anim">
+                    <figure>
+                        <img src="images/sqlalchemy.svg" alt="sqlalchemy">
+                        <figcaption>SQLAlchemy</figcaption>
+                    </figure>
+                </li>
+            </ul>
+            <h3 class="hidden-right skill-title">Mobile</h3>
+            <ul class="skill-section">
+                <li class="hidden-left skill-anim">
+                    <figure>
+                        <img src="images/React.svg" alt="React Native">
+                        <figcaption>React Native</figcaption>
+                    </figure>
+                </li>
+                <li class="hidden-left skill-anim">
+                    <figure>
+                        <img src="images/expo.svg" alt="Expo">
+                        <figcaption>Expo</figcaption>
+                    </figure>
+                </li>
+                <li class="hidden-left skill-anim">
+                    <figure>
+                        <img src="images/flutter.svg" alt="Flutter">
+                        <figcaption>Flutter</figcaption>
+                    </figure>
+                </li>
+                <li class="hidden-left skill-anim">
+                    <figure>
+                        <img src="images/dart.svg" alt="Dart">
+                        <figcaption>Dart</figcaption>
+                    </figure>
+                </li>
+               <li class="hidden-left skill-anim">
+                    <figure>
+                        <img src="images/android-studio.svg" alt="Android Studio">
+                        <figcaption>Android Studio</figcaption>
+                    </figure>
+                </li>
+            </ul>
+            <h3 class="hidden-right skill-title">Languages</h3>
+            <ul class="skill-section">
+               <li class="hidden-left skill-anim">
                     <figure>
                         <img src="images/java.svg" alt="Java">
                         <figcaption>Java</figcaption>
@@ -219,54 +375,16 @@
                         <figcaption>C#</figcaption>
                     </figure>
                 </li>
-                <li class="hidden-left skill-anim">
-                    <figure>
-                        <img src="images/html-language.svg" alt="HTML">
-                        <figcaption>HTML</figcaption>
-                    </figure>
-                </li>
-                <li class="hidden-left skill-anim">
-                    <figure>
-                        <img src="images/css-language.svg" alt="CSS">
-                        <figcaption>CSS</figcaption>
-                    </figure>
-                </li>
+
                 <li class="hidden-left skill-anim">
                     <figure>
                         <img src="images/python.svg" alt="Python">
                         <figcaption>Python</figcaption>
                     </figure>
                 </li>
-                <li class="hidden-left skill-anim">
-                    <figure>
-                        <img src="images/React.svg" alt="React Native">
-                        <figcaption>React Native</figcaption>
-                    </figure>
-                </li>
-                <li class="hidden-left skill-anim">
-                    <figure>
-                        <img src="images/expo.svg" alt="Expo">
-                        <figcaption>Expo</figcaption>
-                    </figure>
-                </li>
-                <li class="hidden-left skill-anim">
-                    <figure>
-                        <img src="images/PostgreSQL.svg" alt="PostgreSQL">
-                        <figcaption>PostgreSQL</figcaption>
-                    </figure>
-                </li>
-                <li class="hidden-left skill-anim">
-                    <figure>
-                        <img src="images/dart.svg" alt="Dart">
-                        <figcaption>Dart</figcaption>
-                    </figure>
-                </li>
-                <li class="hidden-left skill-anim">
-                    <figure>
-                        <img src="images/flutter.svg" alt="Flutter">
-                        <figcaption>Flutter</figcaption>
-                    </figure>
-                </li>
+            </ul>
+            <h3 class="hidden-right skill-title">Other</h3>
+            <ul>
                 <li class="hidden-left skill-anim">
                     <figure>
                         <img src="images/github.svg" alt="GitHub">
@@ -291,54 +409,12 @@
                         <figcaption>Ubuntu</figcaption>
                     </figure>
                 </li>
-                <li class="hidden-left skill-anim">
-                    <figure>
-                        <img src="images/docker.svg" alt="Docker">
-                        <figcaption>Docker</figcaption>
-                    </figure>
-                </li>
-                <li class="hidden-left skill-anim">
-                    <figure>
-                        <img src="images/supabase.svg" alt="Supabase">
-                        <figcaption>Supabase</figcaption>
-                    </figure>
-                </li>
-               <li class="hidden-left skill-anim">
-                    <figure>
-                        <img src="images/android-studio.svg" alt="Android Studio">
-                        <figcaption>Android Studio</figcaption>
-                    </figure>
-                </li>
-                <li class="hidden-left skill-anim">
-                    <figure>
-                        <img src="images/neovim.svg" alt="Neovim">
-                        <figcaption>Neovim</figcaption>
-                    </figure>
-                </li>
-                <li class="hidden-left skill-anim">
-                    <figure>
-                        <img src="images/unity.svg" alt="Unity">
-                        <figcaption>Unity</figcaption>
-                    </figure>
-                </li>
-                <li class="hidden-left skill-anim">
-                    <figure>
-                        <img src="images/trello.svg" alt="Trello">
-                        <figcaption>Trello</figcaption>
-                    </figure>
-                </li>
-                <li class="hidden-left skill-anim">
-                    <figure>
-                        <img src="images/figma.svg" alt="Figma">
-                        <figcaption>Figma</figcaption>
-                    </figure>
-                </li>
             </ul>
         </div>
     </section>
     <!-- Education -->
     <section id="education">
-        <h2 class="title hidden-right">Education</h2>
+        <h2 class="title hidden-right">My <span class="hidden-right green-text">Education</span></h2>
         <div id="ed-card" class="card pulseBox hidden-left">
             <figure>
                 <img src="images/CalPoly_Seal.png" alt="Cal Poly Seal">
@@ -370,7 +446,7 @@
     </section>
     <!-- Contact -->
     <section id="contact">
-        <h2 class="title hidden-left">Contact</h2>
+        <h2 class="title hidden-left">Contact <span class="hidden-left green-text">Me</span></h2>
         <p class="hidden-right">For any inquiries please use the form below.</p>
         <div>
             <form id="form" action="https://formsubmit.co/pkallos19@gmail.com" method="POST">
