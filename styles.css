@@ -501,6 +501,7 @@ header {
   border-style: solid;
   border-radius: 1px;
   display: flex;
+  background-color: rgb(24, 30, 28);
   flex-direction: column;
 }
 
