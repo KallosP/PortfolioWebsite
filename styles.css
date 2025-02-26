@@ -4,21 +4,31 @@
 }
 
 @font-face {
+  font-family: 'Poppins Medium';
+  src: url('fonts/Poppins-Medium.ttf') format('truetype');
+}
+
+@font-face {
   font-family: 'Poppins Bold';
   src: url('fonts/Poppins-Bold.ttf') format('truetype');
 }
 
 :root {
-  --text-color: white;
-  --bckgd-color: rgb(24, 28, 28);
-  --button-color: rgb(55, 152, 106);
-  --border-color: rgb(55, 152, 106);
-  /*rgb(63, 63, 63); */
-  --bright-green: rgb(28, 255, 134);
-  --bubble-text: rgb(114, 189, 154);
-  /*--easy-green-text: rgb(62, 207, 142);*/
-  --easy-green-text: rgb(88, 236, 170);
+  --text-color: rgb(233, 233, 233);
+  --bckgd-color: rgb(21, 24, 32);
+  --easy-green-text: rgb(59, 219, 187);
+  --button-color: rgb(55, 206, 176);
+  --button-border-color: rgb(0, 255, 204);
+  --border-color: rgb(42, 221, 185);
+  --bright-green: rgb(55, 206, 176);
+  --bubble-text: rgb(55, 206, 176);
+  --card-bckgd-color: rgb(31, 70, 62, 0.3);
+  --input-bckgd-color: rgb(31, 70, 62, 0.7);
+  --scrollbar-hover-color: rgb(55, 206, 176, 0.884);
+  --button-hover-color: rgba(55, 206, 176, 0.884);
+  --button-press-color: rgb(0, 255, 204);
 }
+  
 
 .circle {
   height: 24px;
@@ -282,17 +292,17 @@ header {
 .button-27 {
   appearance: none;
   border-radius: 5px;
-  border-color: rgb(28, 255, 134);
+  border-color: var(--button-border-color);
   border-style: solid;
   border-width: 1px;
   background-color: var(--button-color);
   padding: 10px 15px 10px 15px;
   box-sizing: border-box;
-  color: var(--text-color);
+  color: var(--bckgd-color);
   cursor: pointer;
   display: inline-block;
   font-size: 16px;
-  font-weight: 300;
+  font-family: 'Poppins Medium';
   line-height: normal;
   margin: 0;
   min-width: 0;
@@ -308,14 +318,14 @@ header {
 .button-27:hover {
   /*box-shadow: rgba(100, 255, 167, 0.25) 0 8px 15px;*/
   transform: translateY(-2px);
-  background-color: rgba(98, 255, 166, 0.445);
+  background-color: var(--button-hover-color);
   ;
 }
 
 .button-27:active {
   box-shadow: none;
   transform: translateY(0);
-  background-color: rgb(100, 255, 167);
+  background-color: var(--button-press-color);
 }
 
 /* -------------- */
@@ -371,7 +381,7 @@ header {
 }
 
 .card {
-  background-color: rgb(24, 30, 28);
+  background-color: var(--card-bckgd-color);
   /* Black background */
   border-radius: 1px;
   border: solid;
@@ -501,7 +511,7 @@ header {
   border-style: solid;
   border-radius: 1px;
   display: flex;
-  background-color: rgb(24, 30, 28);
+  background-color: var(--card-bckgd-color);
   flex-direction: column;
 }
 
@@ -633,9 +643,9 @@ header {
   box-sizing: border-box;
   font-family: "Poppins Regular";
   background: transparent;
-  background-color: rgba(28, 255, 134, 0.151);
+  background-color: var(--input-bckgd-color);
   color: var(--text-color);
-  border-color: rgb(100, 255, 167);
+  border-color: var(--border-color);
   border-style: solid;
   border-width: 1px;
   border-radius: 1px;
@@ -690,7 +700,7 @@ section {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(62, 207, 142, 0.747);
+  background: var(--scrollbar-hover-color);
   /* color of the scroll thumb on hover*/
 }
 

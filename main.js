@@ -162,14 +162,14 @@ for (var i = 0; i < inputField.length; ++i) {
 
     // Change background color for all elements with input-field class 
     inputField[i].addEventListener('focus', function () {
-        this.style.backgroundColor = '#232323' /*131313*/;
+        this.style.backgroundColor = 'rgb(28, 31, 37)' /*131313*/;
         //this.classList.remove('pulseBox')
         //aura.classList.remove('aura');
     });
 
     // Restore the background color
     inputField[i].addEventListener('blur', function () {
-        this.style.backgroundColor = 'rgba(28, 255, 134, 0.151)';
+        this.style.backgroundColor = 'rgb(31, 70, 62, 0.7)';
         //this.classList.add('pulseBox')
         //aura.classList.add('aura');
     });
