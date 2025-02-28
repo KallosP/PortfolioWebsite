@@ -118,13 +118,17 @@ section::before {
   content: "";
   display: block;
   /* Same height as navbar's padding */
-  height: 20px;
+  height: 44px;
   /* Negative margin equal to height */
   margin: -20px 0 0;
   /* Same height as navbar's padding */
   padding-top: 20px;
   /* Negative margin equal to padding */
   margin-top: -20px;
+}
+
+section {
+  overflow-x: hidden;
 }
 
 /* Nav bar ------------ */
@@ -172,8 +176,8 @@ header {
 }
 
 @media only screen and (max-width: 1200px) {
-  #navbar li {
-    margin: 0px 5px 0px 0px;
+  #navbar {
+    display: none;
   }
 }
 
@@ -184,13 +188,17 @@ header {
 /* Intro ------------ */
 
 #intro {
-  height: 90vh;
+  height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
   color: var(--text-color);
   border-bottom: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #intro h2 {
@@ -315,6 +323,13 @@ header {
   will-change: transform;
 }
 
+@media screen and (max-width: 1200px) {
+  .button-27 {
+    padding: 7px 10px 7px 10px;
+    font-size: 14px;
+  } 
+}
+
 .button-27:hover {
   /*box-shadow: rgba(100, 255, 167, 0.25) 0 8px 15px;*/
   transform: translateY(-2px);
@@ -333,7 +348,7 @@ header {
 #intro h2 {
   font-family: 'Poppins Bold';
   font-size: 70px;
-  margin-bottom: 0px;
+  margin: 0px;
 }
 
 #intro p {
@@ -342,7 +357,21 @@ header {
 }
 
 .info {
-  margin-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14em;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  #intro h2{
+    font-size: 3em;
+  }
+  #intro p {
+    font-size: 1em;
+  }
 }
 
 /* ------------------------ */
@@ -367,6 +396,11 @@ header {
   padding: 10px;
 }
 
+@media screen and (max-width: 1200px) {
+  #experience {
+    padding: 10px;
+  } 
+}
 /* ------------------------ */
 
 /* Projects ------------ */
@@ -459,14 +493,19 @@ header {
   align-items: center;
 }
 
+.card figure div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .card figure img {
   border: 1px solid var(--bright-green);
   border-radius: 2px;
   height: 100%;
   width: 100%;
   object-fit: contain;
-  max-height: 1920px;
-  max-width: 1080px;
+  max-width: 40em;
 }
 
 .card a {
@@ -478,23 +517,31 @@ header {
 }
 
 @media only screen and (max-width: 1200px) {
+  #projects {
+    padding: 10px;
+  }
+  .card figure div {
+    margin: 0;
+  }
   .card {
-    flex-direction: column;
-    max-width: 80%;
+    flex-direction: column-reverse;
+    max-width: 100%;
   }
 }
 
 /* ------------------------ */
 
 /* Skills ------------ */
-@media only screen and (max-width: 1200px) {
-  /* TODO: realign logos */
-}
+
 
 #skills {
   color: var(--text-color);
   text-align: center;
   border-bottom: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #skills div {
@@ -565,6 +612,19 @@ header {
   transform: scale(1.30);
 }
 
+@media only screen and (max-width: 1200px) {
+  /* TODO: realign logos */
+  #skills div {
+    padding: 10px;
+    margin: 0px;
+    max-width: 100%;
+  }
+
+  #skills div ul li {
+    width: 70px;
+  }
+}
+
 /* ------------------------ */
 
 /* Education ------------ */
@@ -608,11 +668,14 @@ header {
 
 @media only screen and (max-width: 1200px) {
   #ed-card {
-    max-width: 95%;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    padding: 10px;
   }
 
   #ed-card figure img {
-    max-width: 60%;
+    max-width: 16em;
   }
 }
 
@@ -668,6 +731,12 @@ header {
 
 #contact button {
   margin-top: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  #contact div {
+    max-width: 100%;
+  } 
 }
 
 /* ------------------------ */
