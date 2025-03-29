@@ -392,8 +392,11 @@ header {
 }
 
 .company-logo {
-  background-color: aliceblue;
+  background-color: var(--bckgd-color);
   padding: 10px;
+}
+
+.revola {
 }
 
 @media screen and (max-width: 1200px) {
